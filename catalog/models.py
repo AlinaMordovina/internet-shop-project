@@ -15,7 +15,6 @@ class Product(models.Model):
     price = models.IntegerField(verbose_name='Цена')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания', blank=True)
     updated_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата изменения', blank=True, null=True)
-    manufactured_at = models.DateField(default='2024-02-17',verbose_name='Дата производства продукта')
 
     class Meta:
         verbose_name = 'Продукт'
