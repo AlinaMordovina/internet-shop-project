@@ -127,7 +127,7 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [
     # Здесь вы можете добавить пути к вашим статическим файлам,
     # если они располагаются вне приложений
-    BASE_DIR / 'static'
+    BASE_DIR / 'static/'
 ]
 
 MEDIA_URL = '/media/'
