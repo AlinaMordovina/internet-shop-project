@@ -72,6 +72,7 @@ class BlogListView(ListView):
     def get_queryset(self, *args, **kwargs):
         queryset = super().get_queryset(*args, **kwargs)
         queryset = queryset.filter(is_public=True)
+
         return queryset
 
 
@@ -82,6 +83,7 @@ class BlogDetailView(DetailView):
         self.object = super().get_object(queryset)
         self.object.views_count += 1
         self.object.save()
+
         return self.object
 
 
