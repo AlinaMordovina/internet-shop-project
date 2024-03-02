@@ -1,0 +1,32 @@
+{% extends 'catalog/blog_base.html' %}
+{% load my_tags %}
+{% block content %}
+<div class="album py-5 bg-light">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4 box-shadow">
+                    <h2 class="jumbotron-heading">{{object.title}}</h2>
+                    <img class="card-img-top"
+                         src="{{ object.preview | media_filter }}"
+                         alt="Card image cap">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body">
+                        {% if object.is_public %}
+                        <p class="card-text">{{object.content}}</p>
+                        <p class="card-text">Количество просмотров: {{object.views_count}}</p>
+                        <small class="card-text">Дата создания {{object.slug}}: {{object.created_at}}</small>
+                        {% else %}
+                        <p class="card-text">Статья ожидает публикации! :)</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
