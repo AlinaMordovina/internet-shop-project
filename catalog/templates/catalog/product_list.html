@@ -16,12 +16,17 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <a href="{% url 'catalog:product_detail' product.pk %}" class="text-white">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Посмотреть</button>
                                 </a>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                <a href="{% url 'catalog:product_update' product.pk %}" class="text-white">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Изменить</button>
+                                </a>
+                                <a href="{% url 'catalog:product_delete' product.pk %}" class="text-white">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Удалить</button>
+                                </a>
                             </div>
-                            <small class="text-muted">{{ product.category }}</small>
                         </div>
+                        <small class="text-muted">{{ product.category }}</small>
                     </div>
                 </div>
             </div>
