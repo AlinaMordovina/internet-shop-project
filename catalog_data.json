@@ -3,65 +3,65 @@
     "model": "catalog.product",
     "pk": 6,
     "fields": {
-      "name": "Яблоко",
-      "description": "зеленое",
-      "image": "",
+      "name": "Яблоки",
+      "description": "красные, сочные, местные",
+      "image": "products_image/яблоки.jpg",
       "category": 3,
       "price": 100,
-      "created_at": "2024-02-17T17:50:37.979Z",
-      "updated_at": "2024-02-17T17:50:37.979Z"
+      "created_at": "2024-02-17T18:39:32.249Z",
+      "updated_at": "2024-02-17T18:39:32.249Z"
     }
   },
   {
     "model": "catalog.product",
     "pk": 7,
     "fields": {
-      "name": "Банан",
-      "description": "сладкий",
-      "image": "",
+      "name": "Бананы",
+      "description": "сладкие",
+      "image": "products_image/banan.jpg",
       "category": 3,
       "price": 50,
-      "created_at": "2024-02-17T17:51:08.506Z",
-      "updated_at": "2024-02-17T17:51:08.506Z"
+      "created_at": "2024-02-17T18:39:32.249Z",
+      "updated_at": "2024-02-17T18:39:32.249Z"
     }
   },
   {
     "model": "catalog.product",
     "pk": 8,
     "fields": {
-      "name": "Апельсин",
-      "description": "красный внутри",
-      "image": "",
+      "name": "Апельсины",
+      "description": "сочные, внутри красные",
+      "image": "products_image/1679471160u1nwcmbtbk.jpg",
       "category": 3,
       "price": 150,
-      "created_at": "2024-02-17T17:51:30.740Z",
-      "updated_at": "2024-02-17T17:51:30.740Z"
+      "created_at": "2024-02-17T18:39:32.249Z",
+      "updated_at": "2024-02-17T18:39:32.249Z"
     }
   },
   {
     "model": "catalog.product",
     "pk": 9,
     "fields": {
-      "name": "Огурец",
-      "description": "свежий",
-      "image": "",
+      "name": "Огурцы",
+      "description": "гладкие",
+      "image": "products_image/chem-mogut-byt-opasny-ogurcy_165666411211889800.jpg",
       "category": 4,
       "price": 100,
-      "created_at": "2024-02-17T17:52:04.378Z",
-      "updated_at": "2024-02-17T17:52:04.378Z"
+      "created_at": "2024-02-17T18:39:32.249Z",
+      "updated_at": "2024-02-17T18:39:32.249Z"
     }
   },
   {
     "model": "catalog.product",
     "pk": 10,
     "fields": {
-      "name": "Помидор",
-      "description": "розовый",
-      "image": "",
+      "name": "Помидоры",
+      "description": "розовые",
+      "image": "products_image/помидоры.jpeg",
       "category": 4,
       "price": 200,
-      "created_at": "2024-02-17T17:52:17.240Z",
-      "updated_at": "2024-02-17T17:52:17.240Z"
+      "created_at": "2024-02-17T18:39:32.249Z",
+      "updated_at": "2024-02-17T18:39:32.249Z"
     }
   },
   {
@@ -70,11 +70,11 @@
     "fields": {
       "name": "Конфеты",
       "description": "шоколадные",
-      "image": "",
+      "image": "products_image/konfeti2.jpg",
       "category": 6,
       "price": 100,
-      "created_at": "2024-02-17T17:52:47.072Z",
-      "updated_at": "2024-02-17T17:52:47.072Z"
+      "created_at": "2024-02-17T18:39:32.249Z",
+      "updated_at": "2024-02-17T18:39:32.249Z"
     }
   },
   {
@@ -82,12 +82,12 @@
     "pk": 12,
     "fields": {
       "name": "Мороженое",
-      "description": "сливочное",
-      "image": "",
+      "description": "сливочное в шоколадной глазури",
+      "image": "products_image/мороженое.jpeg",
       "category": 6,
       "price": 30,
-      "created_at": "2024-02-17T17:53:09.300Z",
-      "updated_at": "2024-02-17T17:53:09.300Z"
+      "created_at": "2024-02-17T18:39:32.249Z",
+      "updated_at": "2024-02-17T18:39:32.249Z"
     }
   },
   {
@@ -96,11 +96,11 @@
     "fields": {
       "name": "Булочка",
       "description": "с джемом",
-      "image": "",
+      "image": "products_image/400_0_1581421321-6866.webp",
       "category": 5,
       "price": 40,
-      "created_at": "2024-02-17T17:53:28.337Z",
-      "updated_at": "2024-02-17T17:53:28.337Z"
+      "created_at": "2024-02-17T18:39:32.249Z",
+      "updated_at": "2024-02-17T18:39:32.249Z"
     }
   },
   {
@@ -109,11 +109,11 @@
     "fields": {
       "name": "Хлеб",
       "description": "со злаками",
-      "image": "",
+      "image": "products_image/different_types_bread_made_from_wheat_flour-_1_-_1_.jpg",
       "category": 5,
       "price": 60,
-      "created_at": "2024-02-17T17:53:54.154Z",
-      "updated_at": "2024-02-17T17:53:54.154Z"
+      "created_at": "2024-02-17T18:39:32.249Z",
+      "updated_at": "2024-02-17T18:39:32.249Z"
     }
   },
   {
@@ -146,6 +146,32 @@
     "fields": {
       "name": "Сладкое",
       "description": "На любой вкус"
+    }
+  },
+  {
+    "model": "catalog.blog",
+    "pk": 4,
+    "fields": {
+      "title": "Море, закат и вкусная еда",
+      "slug": "more-zakat-i-vkusnaya-eda",
+      "content": "Что-то очень интересное",
+      "preview": "blog_preview/scale_1200_EyIaMkQ.jpeg",
+      "created_at": "2024-03-02T22:54:40.626Z",
+      "is_public": true,
+      "views_count": 2
+    }
+  },
+  {
+    "model": "catalog.blog",
+    "pk": 5,
+    "fields": {
+      "title": "Поездка в горы",
+      "slug": "poezdka-v-goryi",
+      "content": "Интересная история",
+      "preview": "blog_preview/86_ZWIbLeU.jpg",
+      "created_at": "2024-03-02T22:55:26.774Z",
+      "is_public": true,
+      "views_count": 0
     }
   }
 ]
