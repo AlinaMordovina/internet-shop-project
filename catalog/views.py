@@ -1,33 +1,36 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
+from django.urls import reverse_lazy, reverse
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 
 from catalog.models import Product
 
 
-def product_list(request):
-    products = Product.objects.all()
-    context = {
-        'object_list': products
-    }
-    return render(request, 'catalog/product_list.html', context)
+class ProductListView(ListView):
+    model = Product
 
 
-def contacts(request):
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        phone = request.POST.get('phone')
-        message = request.POST.get('message')
-
-        with open('contacts.txt', 'a', encoding='UTF-8') as file:
-            file.write(f'{name} {phone}: {message}\n')
-
-        print(f"{name} {phone}: {message}")
-
-    return render(request, 'catalog/contacts.html')
+class ProductDetailView(DetailView):
+    model = Product
 
 
-def product_detail(request, pk):
-    product = get_object_or_404(Product, pk=pk)
-    context = {
-        'object': product
-    }
-    return render(request, 'catalog/product_detail.html', context)
+class ProductCreateView(CreateView):
+    model = Product
+    fields = ('name', 'description', 'image', 'category', 'price',)
+    success_url = reverse_lazy('catalog:product_list')
+
+
+class ProductUpdateView(UpdateView):
+    model = Product
+    fields = ('name', 'description', 'image', 'category', 'price',)
+
+    def get_success_url(self):
+        return reverse('catalog:product_detail', args=[self.kwargs.get('pk')])
+
+
+class ProductDeleteView(DeleteView):
+    model = Product
+    success_url = reverse_lazy('catalog:product_list')
+
+
+class ContactsTemplateView(TemplateView):
+    template_name = 'catalog/contacts.html'
