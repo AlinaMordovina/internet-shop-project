@@ -149,7 +149,7 @@
     }
   },
   {
-    "model": "catalog.blog",
+    "model": "blog.blog",
     "pk": 4,
     "fields": {
       "title": "Море, закат и вкусная еда",
@@ -162,7 +162,7 @@
     }
   },
   {
-    "model": "catalog.blog",
+    "model": "blog.blog",
     "pk": 5,
     "fields": {
       "title": "Поездка в горы",

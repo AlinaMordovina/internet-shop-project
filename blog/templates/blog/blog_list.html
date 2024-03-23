@@ -1,4 +1,4 @@
-{% extends 'catalog/blog_base.html' %}
+{% extends 'blog/base.html' %}
 {% load my_tags %}
 {% block content %}
 <div class="album py-5 bg-light">
@@ -15,13 +15,13 @@
                         <p class="card-text">{{ blog }}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <a href="{% url 'catalog:blog_detail' blog.pk %}" class="text-white">
+                                <a href="{% url 'blog:blog_detail' blog.pk %}" class="text-white">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">Посмотреть</button>
                                 </a>
-                                <a href="{% url 'catalog:blog_update' blog.pk %}" class="text-white">
+                                <a href="{% url 'blog:blog_update' blog.pk %}" class="text-white">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">Изменить</button>
                                 </a>
-                                <a href="{% url 'catalog:blog_delete' blog.pk %}" class="text-white">
+                                <a href="{% url 'blog:blog_delete' blog.pk %}" class="text-white">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">Удалить</button>
                                 </a>
                             </div>
