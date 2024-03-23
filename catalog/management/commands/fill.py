@@ -13,7 +13,7 @@ class Command(BaseCommand):
             data = json.load(file)
 
         for item in data:
-            if item['model'] == 'blog.category':
+            if item['model'] == 'catalog.category':
                 categories.append(item)
 
         return categories
@@ -26,7 +26,7 @@ class Command(BaseCommand):
             data = json.load(file)
 
         for item in data:
-            if item['model'] == 'blog.product':
+            if item['model'] == 'catalog.product':
                 products.append(item)
 
         return products
