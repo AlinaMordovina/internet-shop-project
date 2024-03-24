@@ -1,5 +1,5 @@
 from django.core.exceptions import ValidationError
-from django.forms import ModelForm, BooleanField, forms
+from django.forms import BooleanField, ModelForm, forms
 
 from catalog.models import Product, Version
 
@@ -24,7 +24,7 @@ class ProductForm(StyleFormMixin, ModelForm):
         "бесплатно",
         "обман",
         "полиция",
-        "радар"
+        "радар",
     ]
 
     class Meta:

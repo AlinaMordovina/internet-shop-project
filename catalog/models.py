@@ -1,5 +1,7 @@
 from django.db import models
 
+from users.models import User
+
 
 class Product(models.Model):
     name = models.CharField(max_length=100, verbose_name="Наименование")
@@ -21,6 +23,9 @@ class Product(models.Model):
     )
     updated_at = models.DateTimeField(
         auto_now_add=True, verbose_name="Дата изменения", blank=True, null=True
+    )
+    owner = models.ForeignKey(
+        User, verbose_name="Владелец", blank=True, null=True, on_delete=models.SET_NULL
     )
 
     class Meta:
@@ -56,10 +61,14 @@ class Version(models.Model):
     )
     version_number = models.PositiveIntegerField(default=0, verbose_name="Номер версии")
     version_name = models.CharField(max_length=150, verbose_name="Название версии")
-    is_active = models.BooleanField(default=False, verbose_name="Признак текущей версии")
+    is_active = models.BooleanField(
+        default=False, verbose_name="Признак текущей версии"
+    )
 
     def __str__(self):
-        return f"{self.product}: номер версии {self.version_number} ({self.version_name})"
+        return (
+            f"{self.product}: номер версии {self.version_number} ({self.version_name})"
+        )
 
     class Meta:
         verbose_name = "Версия"
