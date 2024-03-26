@@ -4,16 +4,17 @@ import random
 from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404, redirect
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView, UpdateView
 
-from users.forms import RegistrationForm
+from users.forms import RegistrationForm, UserForm
 from users.models import User
 
 
 class RegisterView(CreateView):
     model = User
     form_class = RegistrationForm
+    template_name = 'users/register.html'
 
     def get_success_url(self):
         return reverse("users:login")
@@ -45,6 +46,15 @@ def verify(request, token):
     return redirect(reverse("users:login"))
 
 
+class UserUpdateView(UpdateView):
+    model = User
+    success_url = reverse_lazy("users:profile")
+    form_class = UserForm
+
+    def get_object(self, queryset=None):
+        return self.request.user
+
+
 def reset_password(request):
     new_password = ''.join([str(random.randint(0, 9)) for _ in range(8)])
     send_mail(
@@ -55,4 +65,4 @@ def reset_password(request):
     )
     request.user.set_password(new_password)
     request.user.save()
-    return redirect(reverse('users:login'))
+    return redirect(reverse('catalog:product_list'))
