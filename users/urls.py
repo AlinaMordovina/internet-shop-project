@@ -4,7 +4,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path
 
 from users.apps import UsersConfig
-from users.views import RegisterView, verify, reset_password
+from users.views import RegisterView, verify, UserUpdateView, reset_password
 
 app_name = UsersConfig.name
 
@@ -13,5 +13,6 @@ urlpatterns = [
     path("logout/", LogoutView.as_view(), name="logout"),
     path("registration/", RegisterView.as_view(), name="register"),
     path("verify/<str:token>/", verify, name="verify"),
-    path("reset_password/", reset_password, name="reset_password"),
+    path("profile/", UserUpdateView.as_view(), name="profile"),
+    path("profile/reset_password", reset_password, name="reset_password"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
